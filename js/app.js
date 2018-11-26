@@ -34,6 +34,16 @@ jQuery(document).ready(function ($) {
             $('nav.navbar .navbar-collapse ul.navbar-nav li.nav-item').removeClass('active');
             $('nav.navbar .navbar-collapse ul.navbar-nav li.nav-item:nth-child(4)').addClass('active');
         }
+
+        if(come("#faq")) {
+            $('nav.navbar .navbar-collapse ul.navbar-nav li.nav-item').removeClass('active');
+            $('nav.navbar .navbar-collapse ul.navbar-nav li.nav-item:nth-child(5)').addClass('active');
+        }
+
+        if(come("#contact-us")) {
+            $('nav.navbar .navbar-collapse ul.navbar-nav li.nav-item').removeClass('active');
+            $('nav.navbar .navbar-collapse ul.navbar-nav li.nav-item:nth-child(6)').addClass('active');
+        }
     });
 
     function come(elem) {

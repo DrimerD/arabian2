@@ -29,6 +29,9 @@ nav.navbar .navbar-collapse {
     justify-content: flex-end;
     text-align: right;
 }
+nav.navbar .navbar-collapse.show {
+    display: flex;
+}
 nav.navbar .navbar-collapse ul.navbar-nav a {
     font-family: 'Tinos', serif;
     font-size: 21px;
@@ -183,6 +186,7 @@ nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.active {
     position: absolute;
     left: -85px;
     bottom: 0px;
+    z-index: 10;
 }
 /*third section*/
 #third-section {
@@ -193,7 +197,7 @@ nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.active {
     max-height: 290px;
 }
 #third-section-content img.right {
-    max-height: 100%;
+    max-height: 90%;
 }
 .section-divider-second .buttons-container a {
     margin: 40px 10px 40px;
@@ -318,7 +322,9 @@ nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.active {
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
     color: #f22f54;
-    padding: 15px 100px;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 250px;
     font-family: 'Tinos', serif;
     font-size: 24px;
     font-weight: 500;
@@ -327,4 +333,106 @@ nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.active {
     background-color: #f22f54;
     color: #fff;
     cursor: pointer;
+}
+
+/*media*/
+@media screen and (max-width: 1400px) {
+    #second-section img, #third-section-content img {
+        max-width: 280px;
+    }
+}
+@media screen and (max-width: 1130px) {
+    #second-section img, #third-section-content img {
+        max-width: 230px;
+    }
+}
+@media screen and (max-width: 991px) {
+    nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.active {
+        border-bottom: 0px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.active a {
+        border-bottom: 1px solid #f22f54;
+    }
+    #second-section img, #third-section-content img {
+        display: none;
+    }
+    #second-section .border-box-right, #third-section-content .border-box-right {
+        left: -50px;
+        height: 95%;
+    }
+    #second-section .border-box-left, #third-section-content .border-box-left {
+        right: -50px;
+        height: 95%;
+    }
+    .section-divider-second .buttons-container a {
+        margin: 20px 10px 20px;
+    }
+    .section-divider-second .our-advertisers .our-advertisers-container {
+        padding: 15px 0px;
+    }
+    .section-divider-second .our-advertisers .our-advertisers-container a {
+        width: 17%;
+        display: inline-block;
+    }
+    .section-divider-second .our-advertisers .our-advertisers-container a img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px) {
+    #second-section h3, #third-section-content h3 {
+        font-size: 30px;
+    }
+    #second-section .border-box-right, #third-section-content .border-box-right {
+        left: -15px;
+        height: 97%;
+    }
+    #second-section .border-box-left, #third-section-content .border-box-left {
+        right: -15px;
+        height: 97%;
+    }
+    .section-divider-second .our-advertisers .our-advertisers-container a {
+        width: auto;
+    }
+    #about-us p {
+        font-size: 20px;
+    }
+    #contact-us .form-container button[type=submit] {
+        max-width: 100%;
+    }
+    #first-section {
+        background-position-x: 37%;
+    }
+}
+@media screen and (max-width: 576px) {
+    #first-section h1 {
+        font-size: 41px;
+    }
+    #second-section .border-box-right, #third-section-content .border-box-right,
+    #second-section .border-box-left, #third-section-content .border-box-left {
+        display: none;
+    }
+    ul {
+        padding-left: 15px;
+    }
+    .section-divider h2 {
+        font-size: 32px;
+    }
+    .section-divider .buttons-container a {
+        font-size: 30px;
+    }
+    #first-section {
+        background-position-x: 40%;
+    }
+}
+@media screen and (max-width: 575px) {
+    #about-us .row:last-child {
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 375px) {
+    #contact-us .form-container {
+        padding: 15px;
+    }
 }
